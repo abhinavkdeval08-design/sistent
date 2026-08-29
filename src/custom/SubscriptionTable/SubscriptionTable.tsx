@@ -36,13 +36,12 @@ export const SubscriptionTable: React.FC<SubscriptionTableProps> = ({
   enterprisePlanLabel = 'Enterprise Plan',
   enterprisePlanButtonLabel = 'Contact Us'
 }) => {
-  // Helper function to render true/false values as Crisp Icons or Text
   const renderValue = (value: boolean | string) => {
     if (typeof value === 'boolean') {
       return value ? (
-        <CheckIcon color="success" data-testid="check-icon" />
+        <CheckIcon color="success" data-testid="check-icon" titleAccess="Included" aria-label="Included" />
       ) : (
-        <CloseIcon color="error" data-testid="close-icon" />
+        <CloseIcon color="error" data-testid="close-icon" titleAccess="Not included" aria-label="Not included" />
       );
     }
     return (
@@ -60,8 +59,7 @@ export const SubscriptionTable: React.FC<SubscriptionTableProps> = ({
           component="h2"
           sx={{
             mb: 3,
-            fontWeight: 700,
-            fontFamily: 'Qanelas Soft, sans-serif' // Figma semantic typography mapping
+            fontWeight: 700
           }}
         >
           {title}
