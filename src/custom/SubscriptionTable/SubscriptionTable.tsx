@@ -133,3 +133,5 @@ export const SubscriptionTable: React.FC<SubscriptionTableProps> = ({
 };
 
 SubscriptionTable.displayName = 'SubscriptionTable';
+
+export default SubscriptionTable;
